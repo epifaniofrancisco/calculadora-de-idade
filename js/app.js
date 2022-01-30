@@ -24,9 +24,9 @@ function pegarData() {
 	let dataNascimento = new Date(document.querySelector("#date").value);
 
 	let infoNascimento = {
+		data: dataNascimento.getDate(),
 		ano: dataNascimento.getFullYear(),
 		mes: dataNascimento.getMonth() + 1,
-		data: dataNascimento.getDate(),
 	};
 
 	return infoNascimento;
@@ -34,9 +34,11 @@ function pegarData() {
 
 function validarData(nascimento, actual) {
 	if (
-		nascimento.ano >= actual.ano ||
-		nascimento.mes >= actual.mes ||
-		nascimento.data >= actual.data
+		nascimento.ano > actual.ano ||
+		(nascimento.mes > actual.mes && nascimento.ano == actual.ano) ||
+		(nascimento.data > actual.data &&
+			nascimento.mes == actual.mes &&
+			nascimento.ano == actual.ano)
 	) {
 		alert("Informe uma data menor.");
 		window.location.href = "index.html";
