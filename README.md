@@ -10,6 +10,10 @@
 
 <p align="justify">Uma calculadora de idade web para verificar quantos dias, meses e anos já passaram desde o seu nascimento.</p>
 
+## Demo
+
+<a href="https://epifaniofrancisco.github.io/calculadora-de-idade/">Demo</a>
+
 ![Captura de ecrã 2022-01-30 205746](https://user-images.githubusercontent.com/81193129/151715540-1b965bc0-f7e2-4478-8b07-21d1f15d942b.jpg)
 
 ## Configuração
